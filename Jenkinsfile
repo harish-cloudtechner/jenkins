@@ -54,7 +54,7 @@ pipeline {
 
                         steps {
 
-                                sh "cp target/*.war /root/apache-tomcat-8.5.61/webapps/"
+                                sh "cp target/*.war /home/ec2-user/apache-tomcat-8.5.61/webapps"
 
                         }
 
