@@ -39,12 +39,22 @@ pipeline {
 	                }
 
 	            }
+		    stage ('create War File') {
+
+                        steps {
+
+                                sh "jar -cf target/dependency/webapp-runner.jar target/*.war"
+
+                        }
+
+                }
+
 
                 stage ('Deploy War File') {
 
                         steps {
 
-                                sh "cp SampleWebApp.war /root/apache-tomcat-8.5.61/webapps/"
+                                sh "cp target/*.war /root/apache-tomcat-8.5.61/webapps/"
 
                         }
 
