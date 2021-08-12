@@ -7,8 +7,8 @@ pipeline {
 	        stage ('Git Checkout') {
 	            steps {
 	                git branch: 'main',
-			credentialsId: 'abaf8590-6021-4c4a-8ee7-8b43d17460ee',
-			url: 'https://github.com/hsct2707/jenkins.git'
+			credentialsId: '74b74552-0563-49e5-9d85-b9bbccaedff2',
+			url: 'https://github.com/harish-cloudtechner/jenkins.git'
 	                }
 	            } 
 		stage ('Compile') {
